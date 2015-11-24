@@ -8,7 +8,7 @@
 
   isCallbackVar = function(var_name) {
     var regex;
-    regex = /(^(cb|cbb|callback|cb2)$)|(^cb_)|(_cb$)|res/i;
+    regex = /(^(cb|cbb|callback|cb2)$)|(^cb_)|(_cb$)|^(res|req|next)$/i;
     return regex.test(var_name);
   };
 

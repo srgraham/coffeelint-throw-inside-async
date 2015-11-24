@@ -11,7 +11,7 @@ isCallbackVar = (var_name)->
     (^(cb|cbb|callback|cb2)$)   # var name exact matches
     | (^cb_)                    # var name that start with "cb_"
     | (_cb$)                    # var name that end with "_cb"
-    | res                       # var name is part of express
+    | ^(res|req|next)$          # var name is part of express
   ///i
 
   return regex.test var_name
